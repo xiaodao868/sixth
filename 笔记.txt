@@ -1,1 +1,62 @@
-git remote set-url origin https://github.com/xiaodao868/sixth.git
+git remote set-url origin https://github.com/xiaodao868/sixth.git；
+
+系统对象:
+Array
+
+map     map返回结果;
+let arr = [1,2,3,4,5];
+let res = arr.map(item=>item === 1); //[1]; 
+
+forEach 循环一遍;
+
+filter  过滤返回结果;
+let arr = [1,2,3,4,5];
+let res = arr.filter(item=>item > 2); //[3,4,5]; 
+
+reduce  多对一;
+let arr = [1,2,3,4,5];
+let res = arr.reduce(tmp,item,index=>tmp+item); //15; 求和
+let res = arr.reduce((tmp,item,index)=>index === arr.length-1?(tmp+item)/arr.length:tmp+item); //3; 求平均数
+
+String
+
+    startsWith 以某个字符串开头 
+    endsWith   以某个字符串结尾 
+
+    let url = 'xxx';
+    if(url.startsWith("http://")||url.startsWith("https://")){
+        alert("是网址")
+    }else{
+        alert("不是网址")
+    } 
+     
+
+JSON
+
+    stringify
+    parse
+
+
+异步处理
+    Promise 
+    Promise.all([
+        p1,
+        p2,
+        p3,
+    ]).then(([data1,data2,data3])=>{
+        // 数据返回的是一个数组
+    },err=>{
+        // 必须全部成功才不会走这里
+    })
+    async/await
+
+    async声明这个函数是async函数
+    await后面必须跟的是一个promise对象
+
+    const show = async()=>{
+        let data1 = await Promise对象;
+        let data2 = await Promise对象;
+        let data3 = await Promise对象;
+        console.log(data1,data2,data3);
+    }
+    show();
