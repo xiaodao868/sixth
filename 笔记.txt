@@ -77,5 +77,43 @@ ES9
 特性)1.封装性 new Date();
 特性)2.继承性 重用前人代码
 特性)2.多态性 
+ES6写法
+class Person{// 我是class
+    constructor(name,age){//我是构造函数
+        this.name = name;
+        this.age = age;
+    }
+    show(){// 方法
+        alert(this.name);
+        alert(this.age);
+    }
+}
+ES5写法
+function Person(name,age){// 我又是class又是构造函数 很奇怪
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.show = function(){//方法
+    alert(this.name);
+    alert(this.age);
+}
+闭包--------------------------------------------
+GC 垃圾回收
+1.底层:栈  每调用一次函数 都会为这个函数分配一个空间(栈),整个函数所有局部变量都会在这个栈里面跑,这个时候有一个问题既然说函数执行会分配空间 那么函数执行完空间也会被回收,
+闭包就是可以让函数执行完 这个栈也不会被回收;
+var aBtn = document.getElementsByTagName("input");
+for(var i = 0;i<aBtn.length;i++){
+    (function(i){ // 闭包
+        aBtn[i].onclick=function(){
+            alert(i);
+        };
+    })(i);
+}
+2.高层:函数当对象处理 对象内容是函数执行细节
 
 机器语言(0和1) -> 汇编(符号代替) -> 低级语言(直接跟硬件打教导 面向过程) -> 高级语言(js java python 面向对象) -> 模块 -> 框架 -> api
+
+
+ES6模块化------------------------------
+js模块系统
+没有模块 -> CMD -> AMD(异步模块加载) -> 

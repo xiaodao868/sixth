@@ -17,8 +17,19 @@
                 alert(this.age);
             }
         }
-        let personTest = new Person("小道",18);
-        personTest.show();
+        class Worker extends Person{
+            constructor(name,age,job){
+                super(name,age);
+                this.job = job;
+            }
+            showJob(){
+                alert(this.job);
+            }
+        }
+
+        let workerTest = new Worker("小道",18,"打杂的");
+        workerTest.show();
+        workerTest.showJob();
     </script>
 </body>
 </html>

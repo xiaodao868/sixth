@@ -15,8 +15,24 @@
             alert(this.name);
             alert(this.age);
         }
-        var personTest = new Person("小道",18);
-        personTest.show();
+
+        // 继承
+        function Worker(name,age,job){// 创建
+            Person.call(this,name,age);
+            this.job = job;
+        }
+        Worker.prototype = new Person();// 继承
+        console.log(Worker);
+        Worker.prototype.constructor = Worker;//创建构造函数
+        console.log(Worker);
+        Worker.prototype.showJob = function(){//添加方法
+            alert(this.job);
+        }
+        console.log(Worker);
+        var workerTest = new Worker("小道",18,"打杂的");
+        workerTest.show();
+        workerTest.showJob();
+
     </script>
 </body> 
 </html>
