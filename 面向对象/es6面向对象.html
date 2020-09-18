@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{// 我是class
+            constructor(name,age){//我是构造函数
+                this.name = name;
+                this.age = age;
+            }
+            show(){// 方法
+                alert(this.name);
+                alert(this.age);
+            }
+        }
+        let personTest = new Person("小道",18);
+        personTest.show();
+    </script>
+</body>
+</html>

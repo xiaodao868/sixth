@@ -60,3 +60,22 @@ JSON
         console.log(data1,data2,data3);
     }
     show();
+
+2.面向对象与闭包
+
+ES7
+    Array.includes();
+ES8
+    aswit/async
+ES9
+    rest/spread
+    异步迭代
+    Promise.finally();
+    增加了正则表达式能力(模式)
+
+面向对象-----------------------------
+特性)1.封装性 new Date();
+特性)2.继承性 重用前人代码
+特性)2.多态性 
+
+机器语言(0和1) -> 汇编(符号代替) -> 低级语言(直接跟硬件打教导 面向过程) -> 高级语言(js java python 面向对象) -> 模块 -> 框架 -> api

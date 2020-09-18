@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age){// 我又是class又是构造函数 很奇怪
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.show = function(){//方法
+            alert(this.name);
+            alert(this.age);
+        }
+        var personTest = new Person("小道",18);
+        personTest.show();
+    </script>
+</body> 
+</html>
